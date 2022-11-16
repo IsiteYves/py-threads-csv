@@ -12,7 +12,7 @@ def foo2(bar):
 
 
 def show_output():
-    print(f'THE MAX BTN TWO FUNCS: {max(output.values())}')
+    print(max(output.values()))
 
 
 def got_output(key, val):
@@ -38,8 +38,8 @@ class ThreadWithReturnValue(Thread):
         return self._return
 
 
-t1 = ThreadWithReturnValue(target=foo, args=('w1',))
-t2 = ThreadWithReturnValue(target=foo2, args=('world2',))
+t1 = ThreadWithReturnValue(target=foo, args=('thr1',))
+t2 = ThreadWithReturnValue(target=foo2, args=('thr2',))
 
 t1.start()
 t2.start()
