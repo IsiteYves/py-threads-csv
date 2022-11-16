@@ -17,7 +17,6 @@ def show_output():
 
 def got_output(key, val):
     global output
-    print(key, val)
     output[key] = val
     if len(output.keys()) == 2:
         show_output()
